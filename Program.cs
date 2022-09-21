@@ -33,7 +33,7 @@ namespace Formula_Leibniz
                 Console.WriteLine($"2 - Quantidade de threads     = {threadCount:N0}");
                 Console.WriteLine($"3 - Limite da serie           = {maxInterations:N0}");
                 Console.WriteLine($"4 - Precissão de calculo      = {precision:N0}");
-                Console.WriteLine($"5 - Delay entre autualizações = {updateDelay:N0}");
+                Console.WriteLine($"5 - Delay entre atualizações = {updateDelay:N0}");
                 Console.WriteLine($"6 - Sair");
 
                 Console.Write("\r\nDigite uma das opções: ");

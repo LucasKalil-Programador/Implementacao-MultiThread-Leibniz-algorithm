@@ -59,12 +59,12 @@ namespace Formula_Leibniz
                     Console.Write(line2);
 
                     int percentege = (int)ProgressPercentege().doubleValue() / 2;
-                    Console.Write("Progress Bar: [");
+                    Console.Write("Progress Bar: (");
                     Console.BackgroundColor = ConsoleColor.Gray;
                     Console.Write("".PadRight(percentege, ' '));
                     Console.ResetColor();
                     int line2dif = oldLine2.Length - line2.Length;
-                    Console.WriteLine("]".PadLeft(50 - percentege, ' ') + "".PadRight(line2dif > 0 ? line2dif : 0, ' '));
+                    Console.WriteLine(")".PadLeft(50 - percentege, ' ') + "".PadRight(line2dif > 0 ? line2dif : 0, ' '));
                     oldLine2 = line2;
 
                     #endregion Line 2
