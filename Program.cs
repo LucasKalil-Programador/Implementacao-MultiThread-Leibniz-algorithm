@@ -17,13 +17,27 @@ namespace Formula_Leibniz
     {
         static void Main(string[] args)
         {
+            // Parametros de execulcao
+
+            // Numero de threads utilizados
             int threadCount = 4;
+
+            // Precissao das operaçoes matematicas
             int precision = 100;
+
+            // De quanto em quanto tempo sera execultado o update dos status
             int updateDelay = 250;
+
+            // Limite de interacoes
             long maxInterations = 3_000_000;
 
+            // Loop principal do software
             while (true)
             {
+
+                // Opcoes do menu
+                #region Menu
+
                 Console.Clear();
                 Console.WriteLine("Calculadora formula Leibniz para PI");
 
@@ -38,6 +52,9 @@ namespace Formula_Leibniz
 
                 Console.Write("\r\nDigite uma das opções: ");
 
+                #endregion Menu
+
+                // Verifica a opcao digitada e redireciona para o escolhido
                 if (int.TryParse(Console.ReadLine(), out int option))
                 {
                     switch (option)
@@ -75,8 +92,9 @@ namespace Formula_Leibniz
             }
         }
 
-        #region case 2 - 5
+        #region case 1 - 6
 
+        // Caso padrao de execulcao utiliza os parametros desejados
         private static void Case_1_ExeculteAlgorith(int threadCount, long maxInterations, int updateDelay, int precision)
         {
             Console.Clear();
@@ -87,6 +105,7 @@ namespace Formula_Leibniz
             Console.ReadLine();
         }
 
+        // Pede para o usuario digitar uma nova quantidade de threads 0 < x > int.MaxValue
         private static void Case_2_RequestThreadCount(out int threadCount)
         {
             Console.WriteLine("\r\nA quantidade de threads é a quantidade de processos\r\n" +
@@ -111,6 +130,7 @@ namespace Formula_Leibniz
             }
         }
 
+        // Pede para o usuario digitar um novo limite de interacao 0 < x > int.MaxValue
         private static void Case_3_RequestLimit(out long maxInterations)
         {
             Console.WriteLine("\r\nLimita ate qual numero sera calculado\r\n" +
@@ -133,6 +153,7 @@ namespace Formula_Leibniz
             }
         }
 
+        // Pede para o usuario digitar um novo valor para a precissao  0 < x > int.MaxValue
         private static void Case_4_RequestPrecision(out int precision)
         {
             Console.WriteLine("\r\nPrecissão de calculo um valor maior melhora o resultado\r\n" +
@@ -155,6 +176,7 @@ namespace Formula_Leibniz
             }
         }
 
+        // Pede para o usuario digitar um no delay de update 0 < x >= 5.000 
         private static void Case_5_RequestDelay(out int updateDelay)
         {
             Console.WriteLine("\r\nPrecissão de calculo um valor maior melhora o resultado\r\n" +
@@ -177,6 +199,7 @@ namespace Formula_Leibniz
             }
         }
 
+        // Caso de simples saida do programa
         private static void Case_6_Exit()
         {
             Environment.Exit(0);
