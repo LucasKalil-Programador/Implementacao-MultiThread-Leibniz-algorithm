@@ -1,0 +1,49 @@
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\Formula Leibniz.exe
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\Formula Leibniz.deps.json
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\Formula Leibniz.runtimeconfig.json
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\Formula Leibniz.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\Formula Leibniz.pdb
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\IKVM.Java.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\IKVM.Reflection.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\IKVM.Runtime.JNI.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\IKVM.Runtime.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\ICSharpCode.SharpZipLib.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\System.Data.Odbc.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\System.Threading.AccessControl.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\linux-x64\native\libikvm-native.so
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\win-x64\native\ikvm-native.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\win-x86\native\ikvm-native.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\freebsd\lib\net6.0\System.Data.Odbc.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\illumos\lib\net6.0\System.Data.Odbc.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\ios\lib\net6.0\System.Data.Odbc.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.Data.Odbc.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.Data.Odbc.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\solaris\lib\net6.0\System.Data.Odbc.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\tvos\lib\net6.0\System.Data.Odbc.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Data.Odbc.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Threading.AccessControl.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\Formula Leibniz.csproj.AssemblyReference.cache
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\Formula Leibniz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\Formula Leibniz.AssemblyInfoInputs.cache
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\Formula Leibniz.AssemblyInfo.cs
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\Formula Leibniz.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\Formula Leibniz.csproj.CopyComplete
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\Formula Leibniz.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\refint\Formula Leibniz.dll
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\Formula Leibniz.pdb
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\Formula Leibniz.genruntimeconfig.cache
+C:\Users\lucas\OneDrive\C# Projets\Projetos Main Solution\Formula Leibniz\obj\Debug\net6.0\ref\Formula Leibniz.dll
