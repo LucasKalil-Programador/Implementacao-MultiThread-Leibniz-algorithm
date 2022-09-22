@@ -26,3 +26,8 @@ Cada computador possui um número de threads máximo, no caso oque define isso �
 - 3º teste Limite: 100.000.000 Threads: 4 Precisão: 100
 
 - 4º teste Limite: 100.000.000 Threads: 1 Precisão: 100
+
+- 5º teste Limite: 10.000.000.000 Threads: 12 Precisão: 100
+
+- 6º teste Limite: 10.000.000.000 Threads: 6 Precisão: 100
+
