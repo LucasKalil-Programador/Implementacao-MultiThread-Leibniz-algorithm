@@ -15,27 +15,39 @@ namespace Formula_Leibniz
 {
     internal class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        ///     Main of Formula_Leibniz program
+        /// </summary>
+        /// <param name="args">Do nothing</param>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage
+            ("Style", "IDE0060:Remover o parâmetro não utilizado", Justification = "<Pendente>")]
+        private static void Main(string[] args)
         {
-            // Parametros de execulcao
 
-            // Numero de threads utilizados
-            int threadCount = 4;
+            #region params
 
-            // Precissao das operaçoes matematicas
+            // Max number of used threads for algorithm
+            int numberOfThreads = 4;
+
+            // precision of calcs
             int precision = 100;
 
-            // De quanto em quanto tempo sera execultado o update dos status
+            // Status update run delay
             int updateDelay = 250;
 
-            // Limite de interacoes
+            // Interation limit
             long maxInterations = 3_000_000;
 
-            // Loop principal do software
-            while (true)
+            // control if Main loop continue or stop
+            bool keepRunning = true;
+
+            #endregion params
+
+            // Main loop
+            while (keepRunning)
             {
 
-                // Opcoes do menu
+                // Menu console writer
                 #region Menu
 
                 Console.Clear();
@@ -44,7 +56,7 @@ namespace Formula_Leibniz
                 Console.WriteLine("\r\nConfiguraçoes de execução\r\n");
 
                 Console.WriteLine($"1 - Iniciar execulção");
-                Console.WriteLine($"2 - Quantidade de threads     = {threadCount:N0}");
+                Console.WriteLine($"2 - Quantidade de threads     = {numberOfThreads:N0}");
                 Console.WriteLine($"3 - Limite da serie           = {maxInterations:N0}");
                 Console.WriteLine($"4 - Precissão de calculo      = {precision:N0}");
                 Console.WriteLine($"5 - Delay entre atualizações = {updateDelay:N0}");
@@ -54,19 +66,21 @@ namespace Formula_Leibniz
 
                 #endregion Menu
 
-                // Verifica a opcao digitada e redireciona para o escolhido
+                // Parce string input to int
                 if (int.TryParse(Console.ReadLine(), out int option))
                 {
+
+                    // Option handler 
                     switch (option)
                     {
                         case 1:
                             {
-                                Case_1_ExeculteAlgorith(threadCount, maxInterations, updateDelay, precision);
+                                Case_1_ExeculteAlgorith(numberOfThreads, maxInterations, updateDelay, precision);
                                 break;
                             }
                         case 2:
                             {
-                                Case_2_RequestThreadCount(out threadCount);
+                                Case_2_RequestNewNumberOfThread(out numberOfThreads);
                                 break;
                             }
                         case 3:
@@ -85,7 +99,7 @@ namespace Formula_Leibniz
                                 break;
                             }
                         case 6:
-                            Case_6_Exit();
+                            keepRunning = false;
                             break;
                     }
                 }
@@ -94,19 +108,44 @@ namespace Formula_Leibniz
 
         #region case 1 - 6
 
-        // Caso padrao de execulcao utiliza os parametros desejados
-        private static void Case_1_ExeculteAlgorith(int threadCount, long maxInterations, int updateDelay, int precision)
+        /// <summary>
+        ///     Case 1 
+        ///     Execulte algorith MultiThread and print result
+        /// </summary>
+        /// 
+        /// <param name="numberOfThreads">
+        ///     Number of execultors threads
+        /// </param>
+        /// 
+        /// <param name="maxInterations">
+        ///     Limit interation algorith
+        /// </param>
+        /// 
+        /// <param name="updateDelay">
+        ///     Update delay in milliseconds for Thread.sleep(updateDelay);
+        /// </param>
+        /// 
+        /// <param name="precision">
+        ///     precision for math calcs
+        /// </param>
+        private static void Case_1_ExeculteAlgorith(int numberOfThreads, long maxInterations, int updateDelay, int precision)
         {
             Console.Clear();
-            AlgorithmExeculter execulter = new(threadCount, maxInterations, updateDelay, new(precision, RoundingMode.HALF_EVEN));
+            AlgorithmExeculter execulter = new(numberOfThreads, maxInterations, updateDelay, new(precision, RoundingMode.HALF_EVEN));
             BigDecimal result = execulter.Execulte();
             Console.WriteLine($"\r\nFinal Result: {result}\r\n" + 
                               "Clique enter para continuar");
             Console.ReadLine();
         }
 
-        // Pede para o usuario digitar uma nova quantidade de threads 0 < x > int.MaxValue
-        private static void Case_2_RequestThreadCount(out int threadCount)
+        /// <summary>
+        ///     Request new number of thread 
+        /// </summary>
+        /// 
+        /// <param name="numberOfThreads">
+        ///     output new value if 0 < value < int.MaxValue
+        /// </param>
+        private static void Case_2_RequestNewNumberOfThread(out int numberOfThreads)
         {
             Console.WriteLine("\r\nA quantidade de threads é a quantidade de processos\r\n" +
                               "simultâneos que irão acontecer durante a execução, um número\r\n" +
@@ -122,7 +161,7 @@ namespace Formula_Leibniz
                 {
                     if (newThreadCount > 0)
                     {
-                        threadCount = newThreadCount;
+                        numberOfThreads = newThreadCount;
                         break;
                     }
                 }
@@ -130,7 +169,12 @@ namespace Formula_Leibniz
             }
         }
 
-        // Pede para o usuario digitar um novo limite de interacao 0 < x > int.MaxValue
+        /// <summary>
+        ///     Request new limit interations
+        /// </summary>
+        /// <param name="maxInterations">
+        ///     output new value if 0 < value < long.MaxValue
+        /// </param>
         private static void Case_3_RequestLimit(out long maxInterations)
         {
             Console.WriteLine("\r\nLimita ate qual numero sera calculado\r\n" +
@@ -153,7 +197,13 @@ namespace Formula_Leibniz
             }
         }
 
-        // Pede para o usuario digitar um novo valor para a precissao  0 < x > int.MaxValue
+        /// <summary>
+        ///     Request new precision value
+        /// </summary>
+        /// 
+        /// <param name="precision">
+        ///     output new value if 0 < value < int.MaxValue
+        /// </param>
         private static void Case_4_RequestPrecision(out int precision)
         {
             Console.WriteLine("\r\nPrecissão de calculo um valor maior melhora o resultado\r\n" +
@@ -176,7 +226,13 @@ namespace Formula_Leibniz
             }
         }
 
-        // Pede para o usuario digitar um no delay de update 0 < x >= 5.000 
+        /// <summary>
+        ///     Request new Delay value
+        /// </summary>
+        /// 
+        /// <param name="updateDelay">
+        ///     output new value if 0 < value <= 5.000
+        /// </param>
         private static void Case_5_RequestDelay(out int updateDelay)
         {
             Console.WriteLine("\r\nPrecissão de calculo um valor maior melhora o resultado\r\n" +
@@ -197,12 +253,6 @@ namespace Formula_Leibniz
                 }
                 Console.WriteLine();
             }
-        }
-
-        // Caso de simples saida do programa
-        private static void Case_6_Exit()
-        {
-            Environment.Exit(0);
         }
 
         #endregion case 2 - 5

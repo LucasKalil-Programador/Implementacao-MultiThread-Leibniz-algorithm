@@ -72,7 +72,7 @@ namespace Formula_Leibniz
             this.RawPI = ConstNumber.ZERO;
             while (N < Max)
             {
-                RawPI = RawPI.add(CalculateN(N++), Context);
+                RawPI = RawPI.add(CalculateN(N++));
             }
   
             return RawPI;
@@ -101,11 +101,11 @@ namespace Formula_Leibniz
         private BigDecimal CalculateN(long n)
         {
             BigDecimal signal = (n % 2 == 0) ? ConstNumber.ONE : ConstNumber.NAGATIVE_ONE;
-            BigDecimal subResult2 = BigDecimal.valueOf(n)
-                                 .multiply(ConstNumber.TWO, Context)
-                                 .add(ConstNumber.ONE, Context);
+            BigDecimal divisor = BigDecimal.valueOf(n)
+                                 .multiply(ConstNumber.TWO)
+                                 .add(ConstNumber.ONE);
 
-            return signal.divide(subResult2, Context);
+            return signal.divide(divisor, Context);
         }
     }
 
@@ -167,7 +167,7 @@ namespace Formula_Leibniz
         /// <returns>
         ///     Array with length numberOfThrea 
         /// </returns>
-        public static LeibnizAlgorithm[] DiviteTasks(int numberOfThreads, long limitSeries, MathContext mathContext)
+        public static LeibnizAlgorithm[] DivideTasks(int numberOfThreads, long limitSeries, MathContext mathContext)
         {
             long perThread = limitSeries / numberOfThreads;
             long lastThreadMax = perThread + (limitSeries - perThread * numberOfThreads);

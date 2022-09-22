@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace Formula_Leibniz
 {
+
+    /// <summary>
+    ///     Simple buffer with frequently used numbers, this can improve performance
+    /// </summary>
     public static class ConstNumber
     {
         public static readonly BigDecimal ZERO = BigDecimal.ZERO;

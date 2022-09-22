@@ -9,7 +9,6 @@ namespace Formula_Leibniz
 {
     public class AlgorithmExeculter
     {
-        private int ThreadCount { get; set; }
         private int StatusUpdateDelay { get; set; }
         private long MaxInterations { get; set; }
         private MathContext MathContext { get; set; }
@@ -17,10 +16,9 @@ namespace Formula_Leibniz
         private LeibnizAlgorithm[] Algorithms { get; set; }
         private Task<BigDecimal>[]? Threads { get; set; }
 
-        public AlgorithmExeculter(int threadCount, long maxInterations, int statusUpdateDelay, MathContext mathContext)
+        public AlgorithmExeculter(int numberOfThreads, long maxInterations, int statusUpdateDelay, MathContext mathContext)
         {
-            this.Algorithms = LeibnizAlgorithmUtils.DiviteTasks(threadCount, maxInterations, mathContext);
-            this.ThreadCount = threadCount;
+            this.Algorithms = LeibnizAlgorithmUtils.DivideTasks(numberOfThreads, maxInterations, mathContext);
             this.MaxInterations = maxInterations;
             this.StatusUpdateDelay = statusUpdateDelay;
             this.MathContext = mathContext;
@@ -33,11 +31,8 @@ namespace Formula_Leibniz
 
             Task statusLoop = Task.Run(() =>
             {
+                int oldLine1Length = 0, oldLine2Length = 0, oldLine3Length = 0;
                 int lastIteration = 0;
-
-                string oldLine1 = string.Empty;
-                string oldLine2 = string.Empty;
-                string oldLine3 = string.Empty;
 
                 while (lastIteration <= 1)
                 {
@@ -48,14 +43,14 @@ namespace Formula_Leibniz
                     string line1 = $"Enlapsed Time: {EnlapsedTime()} - " +
                         $"Expected Time To Complete: {ExpectedTime()} - " +
                         $"Progress: {ProgressPercentegeString()}";
-                    Console.WriteLine(line1.PadRight(oldLine1.Length, ' '));
-                    oldLine1 = line1;
+                    Console.WriteLine(line1.PadRight(oldLine1Length, ' '));
+                    oldLine1Length = line1.Length;
 
                     #endregion Line 1
 
                     #region Line 2
 
-                    string line2 = $"Active Threads: {CountActiveThreads():N0}/{ThreadCount:N0} - ";
+                    string line2 = $"Active Threads: {CountActiveThreads():N0}/{Threads?.Length:N0} - ";
                     Console.Write(line2);
 
                     int percentege = (int)ProgressPercentege().doubleValue() / 2;
@@ -63,17 +58,17 @@ namespace Formula_Leibniz
                     Console.BackgroundColor = ConsoleColor.Gray;
                     Console.Write("".PadRight(percentege, ' '));
                     Console.ResetColor();
-                    int line2dif = oldLine2.Length - line2.Length;
+                    int line2dif = oldLine2Length - line2.Length;
                     Console.WriteLine(")".PadLeft(50 - percentege, ' ') + "".PadRight(line2dif > 0 ? line2dif : 0, ' '));
-                    oldLine2 = line2;
+                    oldLine2Length = line2.Length;
 
                     #endregion Line 2
 
                     #region Line 3
 
                     string line3 = $"Actual PI Value: {Algorithms.CalcResultPI()}";
-                    Console.WriteLine(line3.PadRight(oldLine3.Length, ' '));
-                    oldLine3 = line3;
+                    Console.WriteLine(line3.PadRight(oldLine3Length, ' '));
+                    oldLine3Length = line3.Length;
 
                     #endregion Line 3
                     
@@ -149,13 +144,15 @@ namespace Formula_Leibniz
 
         private Task InitTasks()
         {
-            Task.Run(() => Threads = Algorithms.StartAllTasks());
-            int tmp = "\rIniciando threads".Length;
-            while (Threads == null)
+            Task startTask = Task.Run(() => Threads = Algorithms.StartAllTasks());
+            string loadingSTR = "\rIniciando threads";
+            while (!startTask.IsCompleted)
             {
-                Console.Write("\rIniciando threads".PadRight(tmp++, '.'));
+                Console.SetCursorPosition(0, 0);
+                Console.Write(loadingSTR += ".");
                 Thread.Sleep(250);
             }
+            
             Console.Clear();
             return Task.WhenAll(Threads);
         }
