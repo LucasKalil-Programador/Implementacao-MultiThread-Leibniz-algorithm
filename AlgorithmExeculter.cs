@@ -19,7 +19,7 @@ namespace Formula_Leibniz
 
         public AlgorithmExeculter(int threadCount, long maxInterations, int statusUpdateDelay, MathContext mathContext)
         {
-            this.Algorithms = LeibnizAlgorithmUtils.SubDiviteTasks(threadCount, maxInterations, mathContext);
+            this.Algorithms = LeibnizAlgorithmUtils.DiviteTasks(threadCount, maxInterations, mathContext);
             this.ThreadCount = threadCount;
             this.MaxInterations = maxInterations;
             this.StatusUpdateDelay = statusUpdateDelay;
@@ -91,7 +91,7 @@ namespace Formula_Leibniz
 
         private long Progress()
         {
-            return (from LeibnizAlgorithm a in Algorithms select a.I - a.Initial_i).Sum();
+            return (from LeibnizAlgorithm a in Algorithms select a.N - a.Initial).Sum();
         }
 
         private BigDecimal ProgressPercentege()
