@@ -74,7 +74,7 @@ namespace Formula_Leibniz
             {
                 RawPI = RawPI.add(CalculateN(N++));
             }
-  
+
             return RawPI;
         }
 
@@ -178,7 +178,7 @@ namespace Formula_Leibniz
             for (int i = 0; i < numberOfThreads; i++)
             {
                 long initial = perThread * i;
-                
+
                 if (i == numberOfThreads - 1) max = lastThreadMax;
                 algorithms[i] = new LeibnizAlgorithm(initial, max, mathContext);
             }

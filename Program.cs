@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Media;
-using System.Threading;
-using System.IO;
-using System.IO.Compression;
-using System.Numerics;
-using System.Reflection;
-using java.math;
+﻿using java.math;
 
 namespace Formula_Leibniz
 {
@@ -133,7 +122,7 @@ namespace Formula_Leibniz
             Console.Clear();
             AlgorithmExeculter execulter = new(numberOfThreads, maxInterations, updateDelay, new(precision, RoundingMode.HALF_EVEN));
             BigDecimal result = execulter.Execulte();
-            Console.WriteLine($"\r\nFinal Result: {result}\r\n" + 
+            Console.WriteLine($"\r\nFinal Result: {result}\r\n" +
                               "Clique enter para continuar");
             Console.ReadLine();
         }

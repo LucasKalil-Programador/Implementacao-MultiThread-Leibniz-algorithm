@@ -1,9 +1,4 @@
 ﻿using java.math;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Formula_Leibniz
 {
@@ -102,19 +97,19 @@ namespace Formula_Leibniz
                     oldLine3Length = line3.Length;
 
                     #endregion Line 3
-                    
+
                     Thread.Sleep(StatusUpdateDelay);
                     if (OnEnd.IsCompleted) lastIteration++;
                 }
             });
-            
+
             statusLoop.Wait();
 
             return Algorithms.CalcResultPI();
         }
 
         #region Progress Calcs
-  
+
         /// <summary>
         ///     Sum all algorithms progress
         /// </summary>
@@ -179,11 +174,11 @@ namespace Formula_Leibniz
         {
             long enlapsedMS = (long)Math.Max((DateTime.Now - oldTime).TotalMilliseconds, 1);
             oldTime = DateTime.Now;
-            
+
             long progressNow = Progress();
             double progressDif = Math.Max((progressNow - oldProgress) * (1000.0 / enlapsedMS), 1);
             oldProgress = progressNow;
-            
+
             try
             {
                 return TimeSpan.FromSeconds((MaxInterations - progressNow) / progressDif).ToString("hh':'mm':'ss");
@@ -239,7 +234,7 @@ namespace Formula_Leibniz
                 Console.Write(loadingSTR += ".");
                 Thread.Sleep(250);
             }
-            
+
             Console.Clear();
             return Threads != null ? Task.WhenAll(Threads) : Task.CompletedTask;
         }
