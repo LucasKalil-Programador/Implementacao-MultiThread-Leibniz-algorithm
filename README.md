@@ -20,14 +20,14 @@ Por assim vai até o limite especificado
 Cada computador possui um número de threads máximo, no caso oque define isso é o cpu usado, o computador nesse teste foi um ryzen 5 3600 com 6 núcleos 12 threads, ou seja, o máximo que o software pode executar em simultâneo é 12 mais do que isso o computador espera uma acabar e agenda a próxima execução não fazendo efeito no desempenho ou até mesmo tendo desempenho pior
 
 - 1º teste Limite: 100.000.000 Threads: 12 Precisão: 100
-
+<img src="https://user-images.githubusercontent.com/82661706/191871088-657d9923-4aa8-4748-82b5-c20db4cbff99.png" width="600" height="80" />
 - 2º teste Limite: 100.000.000 Threads: 8 Precisão: 100
-
+<img src="https://user-images.githubusercontent.com/82661706/191871085-034016f2-ee8e-4c81-b739-5ee539220d55.png" width="600" height="80" />
 - 3º teste Limite: 100.000.000 Threads: 4 Precisão: 100
-
+<img src="https://user-images.githubusercontent.com/82661706/191871084-f79d0e7e-f243-48b9-96d3-c53b88ec5ed0.png" width="600" height="80" />
 - 4º teste Limite: 100.000.000 Threads: 1 Precisão: 100
-
+<img src="https://user-images.githubusercontent.com/82661706/191871083-bd7e9f07-95fc-4f93-8d34-da963f8500bf.png" width="600" height="80" />
 - 5º teste Limite: 10.000.000.000 Threads: 12 Precisão: 100
-
+<img src="https://user-images.githubusercontent.com/82661706/191871081-246d6b85-a0a7-40e6-8632-0e885cf109bf.png" width="600" height="80" />
 - 6º teste Limite: 10.000.000.000 Threads: 6 Precisão: 100
-
+<img src="https://user-images.githubusercontent.com/82661706/191871077-00b37d51-5f99-4e26-8842-b648976c96e0.png" width="600" height="80" />
