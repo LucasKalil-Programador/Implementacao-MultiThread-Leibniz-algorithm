@@ -15,7 +15,7 @@ thread 3 i = 200.000.000 ⇾ 300.000.000<br>
 
 Por assim vai até o limite especificado
 
-# Numero de thread vs tempo teste
+# Numero de thread vs tempo - teste
 
 Cada computador possui um número de threads máximo, no caso oque define isso é o cpu usado, o computador nesse teste foi um ryzen 5 3600 com 6 núcleos 12 threads, ou seja, o máximo que o software pode executar em simultâneo é 12 mais do que isso o computador espera uma acabar e agenda a próxima execução não fazendo efeito no desempenho ou até mesmo tendo desempenho pior
 
@@ -31,3 +31,13 @@ Cada computador possui um número de threads máximo, no caso oque define isso �
 <img src="https://user-images.githubusercontent.com/82661706/191871081-246d6b85-a0a7-40e6-8632-0e885cf109bf.png" width="600" height="80" />
 - 6º teste Limite: 10.000.000.000 Threads: 6 Precisão: 100
 <img src="https://user-images.githubusercontent.com/82661706/191871077-00b37d51-5f99-4e26-8842-b648976c96e0.png" width="600" height="80" />
+
+# Bibliotecas e tecnologias usadas
+
+- [IKVM](https://github.com/ikvm-revived/ikvm) Para uso do BigDecmal
+- [C# dotnet](https://learn.microsoft.com/en-us/dotnet/csharp/)
+- [Visual studio 2022](https://visualstudio.microsoft.com/pt-br/vs/)
+
+# Quem sou eu
+
+Meu nome é Lucas, estudante de ciências da computação, desenvolvedor de software e esse foi mais um projeto no meu desenvolvimento profissional
