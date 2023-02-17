@@ -224,8 +224,8 @@ namespace Formula_Leibniz
         /// </param>
         private static void Case_5_RequestDelay(out int updateDelay)
         {
-            Console.WriteLine("\r\nPrecissão de calculo um valor maior melhora o resultado\r\n" +
-                              "porem levara mais tempo para calcular recomendado entre 50 e 200\r\n" +
+            Console.WriteLine("\r\nTempo entre atualizaçao do progresso\r\n" +
+                              "valor recomendado entre 50 e 200\r\n" +
                               $"valor minimo: 1 | valor maximo: 5.000\r\n");
             while (true)
             {

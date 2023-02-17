@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ED6ngyFczE1klmhZA8g8P9T3k5Are0bdeaaW13ySuG+aypRAbsq7hVoskeo/SycxlnDan/UPjLM/aMLvdHj6xw==",
+  "dgSpecHash": "AqiSCqBLrPYmjcNrfaH2WZj9GiWDebhvLWJPzU5Az+NOf6di1VZfbK34iDNZJUHDlxBy4GeFujyCpo/DAuuxhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucas\\OneDrive\\C# Projets\\Projetos Main Solution\\Formula Leibniz\\Formula Leibniz.csproj",
+  "projectFilePath": "C:\\Users\\lucas\\Desktop\\Main folder\\Programming\\C#\\Implementacao-MultiThread-Leibniz-algorithm\\Formula Leibniz.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas\\.nuget\\packages\\ikvm\\8.2.1\\ikvm.8.2.1.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.extensions.dependencymodel\\6.0.0\\microsoft.extensions.dependencymodel.6.0.0.nupkg.sha512",

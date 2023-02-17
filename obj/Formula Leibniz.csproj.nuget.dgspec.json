@@ -1,32 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas\\OneDrive\\C# Projets\\Projetos Main Solution\\Formula Leibniz\\Formula Leibniz.csproj": {}
+    "C:\\Users\\lucas\\Desktop\\Main folder\\Programming\\C#\\Implementacao-MultiThread-Leibniz-algorithm\\Formula Leibniz.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas\\OneDrive\\C# Projets\\Projetos Main Solution\\Formula Leibniz\\Formula Leibniz.csproj": {
+    "C:\\Users\\lucas\\Desktop\\Main folder\\Programming\\C#\\Implementacao-MultiThread-Leibniz-algorithm\\Formula Leibniz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\C# Projets\\Projetos Main Solution\\Formula Leibniz\\Formula Leibniz.csproj",
+        "projectUniqueName": "C:\\Users\\lucas\\Desktop\\Main folder\\Programming\\C#\\Implementacao-MultiThread-Leibniz-algorithm\\Formula Leibniz.csproj",
         "projectName": "Formula Leibniz",
-        "projectPath": "C:\\Users\\lucas\\OneDrive\\C# Projets\\Projetos Main Solution\\Formula Leibniz\\Formula Leibniz.csproj",
+        "projectPath": "C:\\Users\\lucas\\Desktop\\Main folder\\Programming\\C#\\Implementacao-MultiThread-Leibniz-algorithm\\Formula Leibniz.csproj",
         "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas\\OneDrive\\C# Projets\\Projetos Main Solution\\Formula Leibniz\\obj\\",
+        "outputPath": "C:\\Users\\lucas\\Desktop\\Main folder\\Programming\\C#\\Implementacao-MultiThread-Leibniz-algorithm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "IKVM": {
               "target": "Package",
@@ -51,7 +49,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -60,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,43 +1,71 @@
-# Objetivo 
+# Implementação MultiThread Leibniz algorithm
 
-Esse projeto surgiu como treinamento de multi processamento utilizado Async do c#, um programa multi processamento funciona processando uma quantidade grande de dados em várias threads com o objetivo que um trabalho grande seja sub dividido em pequenos e cada threads faça uma parte
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/LucasKalil-Programador/Implementacao-MultiThread-Leibniz-algorithm/blob/e26c8530887781cc6300d273c37fa70e11c128f6/LICENCE)
 
-# Multi thread
+# Sobre o projeto
 
-Multi thread pode aumentar a performance geral do software, porem o uso pode causar efeitos inesperados se 2 threads tentarem usar o mesmo recurso em simultâneo, pode ocorrer problemas, por isso na implementação criada para esse projeto é feita de forma que cada thread tenha seus recursos e eles não são divididos entre elas, evitando assim o uso de lock e syncronized 
+Esse projeto foi inicialmente idealizado para servir de estudo sobre programação concorrente com múltiplos processos sendo executado ao mesmo tempo e como esses processos se comunicam e juntos resolvem um problema maior.
 
-### Exemplo de divisão da tarefa
+## Leibniz algorithm
 
-De 0 a 1.000.000.000 a execução com 10 threads<br>
-thread 1 i = 0 ⇾ 100.000.000<br>
-thread 2 i = 100.000.000 ⇾ 200.000.000<br>
-thread 3 i = 200.000.000 ⇾ 300.000.000<br>
+Gottfried Wilhelm Leibniz foi um polímata e filosofo ele foi o responsável por criar uma formula matemática que permitia chegar a uma aproximação para PI.
 
-Por assim vai até o limite especificado
+[Explicação detalhada da formula](https://pt.wikipedia.org/wiki/F%C3%B3rmula_de_Leibniz_para_%CF%80)
 
-# Numero de thread vs tempo - teste
+![Formula Leibniz para PI!](https://user-images.githubusercontent.com/82661706/219649758-ebf3bb63-e87b-4062-bb02-8c752d86fa13.svg)
 
-Cada computador possui um número de threads máximo, no caso oque define isso é o cpu usado, o computador nesse teste foi um ryzen 5 3600 com 6 núcleos 12 threads, ou seja, o máximo que o software pode executar em simultâneo é 12 mais do que isso o computador espera uma acabar e agenda a próxima execução não fazendo efeito no desempenho ou até mesmo tendo desempenho pior
+Essa formula permite realizar uma iteração infinita e por isso demanda muito poder computacional por a isso foi um ótimo modo de usar o multi processamento paralelo para que essa resolução fosse feita de forma mais performática.
 
-- 1º teste Limite: 100.000.000 Threads: 12 Precisão: 100
-<img src="https://user-images.githubusercontent.com/82661706/191871088-657d9923-4aa8-4748-82b5-c20db4cbff99.png" width="600" height="80" />
-- 2º teste Limite: 100.000.000 Threads: 8 Precisão: 100
-<img src="https://user-images.githubusercontent.com/82661706/191871085-034016f2-ee8e-4c81-b739-5ee539220d55.png" width="600" height="80" />
-- 3º teste Limite: 100.000.000 Threads: 4 Precisão: 100
-<img src="https://user-images.githubusercontent.com/82661706/191871084-f79d0e7e-f243-48b9-96d3-c53b88ec5ed0.png" width="600" height="80" />
-- 4º teste Limite: 100.000.000 Threads: 1 Precisão: 100
-<img src="https://user-images.githubusercontent.com/82661706/191871083-bd7e9f07-95fc-4f93-8d34-da963f8500bf.png" width="600" height="80" />
-- 5º teste Limite: 10.000.000.000 Threads: 12 Precisão: 100
-<img src="https://user-images.githubusercontent.com/82661706/191871081-246d6b85-a0a7-40e6-8632-0e885cf109bf.png" width="600" height="80" />
-- 6º teste Limite: 10.000.000.000 Threads: 6 Precisão: 100
-<img src="https://user-images.githubusercontent.com/82661706/191871077-00b37d51-5f99-4e26-8842-b648976c96e0.png" width="600" height="80" />
+## Interface do software
 
-# Bibliotecas e tecnologias usadas
+O software foi feito para ser usado no console como mostra as imagens abaixo.
 
-- [IKVM](https://github.com/ikvm-revived/ikvm) Para uso do BigDecmal
-- [C# dotnet](https://learn.microsoft.com/en-us/dotnet/csharp/)
-- [Visual studio 2022](https://visualstudio.microsoft.com/pt-br/vs/)
+### Menu
 
-# Quem sou eu
+O usuário pode realizar configurações nos parâmetros de execução.
 
-Meu nome é Lucas, estudante de ciências da computação, desenvolvedor de software e esse foi mais um projeto no meu desenvolvimento profissional
+![Menu exemplo](https://user-images.githubusercontent.com/82661706/219707806-cd0c18ff-f7bf-48ef-9651-0b3e51fab860.png)
+
+### Durante a execução
+
+o usuário tem como visualizar o progresso, valor atual e a expectativa de tempo ate o termino da execução.
+
+![Captura de tela_20230217_093104](https://user-images.githubusercontent.com/82661706/219707789-8516d972-ac73-4135-a715-713bfc56adbc.png)
+
+## Testes
+
+### Configuração: 4 Threads limite 10.000.000.000
+
+### Tempo ate finalização 00:59:48
+
+![Captura de tela_20230217_123107](https://user-images.githubusercontent.com/82661706/219707801-b4b0205a-e45f-4b56-aa6d-8c0f66c1b16f.png)
+
+### Configuração: 12 Threads limite 10.000.000.000
+
+### Tempo ate finalização 00:32:48
+
+![Captura de tela_20230217_130434](https://user-images.githubusercontent.com/82661706/219707804-60e94f90-3784-4369-8c39-177d73c94a93.png)
+
+### Conclusão dos testes
+
+Na configuração com 12 threads levou cerca de 54% do tempo do teste com 4 threads mostrando assim que de fato ouve uma melhora considerável. a configuração da maquina testada era ryzen 5 3600 que tem 6 cores e 12 threads caso fosse um processador melhor, o impacto seria ainda mais perceptível.
+
+o valor de PI é aproximadamente 3,14159 26535 89793 ambos os teste chegaram no resultado que se aproxima a 9ª casa decimal caso o software fosse configurado para mais iterações era possível chegar a uma aproximação ainda mais alta.
+
+## Como executar o projeto
+
+Existem diversas formas de execultar esse projeto sendo a mais fácil baixar a [release](https://github.com/LucasKalil-Programador/Implementacao-MultiThread-Leibniz-algorithm/releases) atual do projeto e executar o .exe
+
+Para a segunda forma sera necessário o [.NET SDK 7.0](https://dotnet.microsoft.com/en-us/download) a pois isso baixe o repositório em um arquivo local e execute o comando no prompt de comando
+
+```bash
+# estando na pasta local do projeto execulte o comando
+dotnet run
+```
+
+# Outras informações
+
+Criador: Lucas Guimarães Kalil - desenvolvedor full stack
+
+Linkedin: https://www.linkedin.com/in/lucas-kalil-436a6220a/<br>
+Contato: lucas.prokalil2020@outlook.com
